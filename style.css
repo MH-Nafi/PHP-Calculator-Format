@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body{
+    overflow: hidden;
+    background-color: lightblue;
+}
+.container{
+    width: 800px;
+    height:400px;
+    background-color: rgb(22, 21, 21);
+    position: relative;
+    left: 0px;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow:0 5px 21px black;
+}
+.main{
+    width: 100%;
+    height: 300px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.main .l-side,.r-side{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.main .l-side h1{
+    position: relative;
+    color: aqua;
+    font-family: sans-serif;
+    font-size: 30px;
+    top: 75px;
+    left: 50px;
+}
+.main .l-side h1::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 150%;
+    background:lightblue;  
+    top: -25%;
+    left: -10px;
+}
+
+.main .r-side {
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+.main .r-side input:nth-child(1),input:nth-child(2){
+    width: 85%;
+    height: 30px;
+    background:transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid rgb(155, 139, 139);
+}
+.main .r-side input:nth-child(1)::placeholder,input:nth-child(2)::placeholder{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: white;
+}
+.main .r-side input,select{
+    margin-bottom: 15px;
+}
+.main .r-side select{
+    width: 85%;
+    height: 30px;
+}
+.main .r-side .submit{
+    width: 80px;
+    padding: 5px;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(180, 100%, 50%);
+    border: none;
+    border-radius: 2px;
+}
+
+
+.main .footer{
+    width: 100%;
+    height: 100px;
+}
+.container .footer p{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="container">
+    <div class="main">
+      <div class="l-side">
+        <h1>PHP <br> CALCULATOR</h1>
+      </div>
+      <div class="r-side">
+        <form method="POST">
+          <input type="number" name="input1" placeholder="Inter 1st Number" required>
+          <input type="number" name="input2" placeholder="Inter 2st Number" required>
+          <select name="operation" id="">
+            <option name="Sum" value="Sum">Sum</option>
+            <option value="Sub">Sub</option>
+            <option value="Mul">Mul</option>
+            <option value="Div">Div</option>
+          </select>
+          <input class="submit" name="submit" type="submit" value="SUBMIT">
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <p>The result of two number is = <span>
+          <?php
+                    if(isset($_POST['submit'])){
+                        $num1=$_POST['input1'];
+                        $num2=$_POST['input2'];
+                        $operation=$_POST['operation'];
+
+                        switch($operation){
+                            case "Sum":
+                                $sum=$num1+$num2;
+                                echo "{$sum}";
+                                break;
+                            case "Sub":
+                                $sum=$num1-$num2;
+                                echo "{$sum}";
+                                break;
+                            case "Mul":
+                                $sum=$num1*$num2;
+                                echo "{$sum}";
+                                break;
+                            case "Div":
+                                $sum=$num1/$num2;
+                                echo "{$sum}";
+                                break;
+                            default:
+                                echo "please fillup both input box";
+                        }
+                    }
+                ?>
+        </span></p>
+    </div>
+  </section>
+</body>
+
+</html>
